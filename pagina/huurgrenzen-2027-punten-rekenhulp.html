@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huurgrenzen 2027: sociale huur, middenhuur of vrije sector? Vul uw punten in</title>
+<meta name="description" content="Hoeveel punten heeft uw woning en wat betekent dat in 2027? Vul uw punten in en zie of het sociale huur (tot € 959,71), middenhuur (tot € 1.263,32) of vrije sector is. Met bronnen; de huurverhoging 2027 is nog niet aangekondigd.">
+<style>
+  :root{--bg:#F5F1E9;--ink:#1d2733;--navy:#17324d;--accent:#b85a14;--muted:#566272;--card:#ffffff;--geel:#fff4d6;--ok:#1f6b3a;--let:#8a4b00}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14202c;--ink:#eef1f4;--navy:#9cc3e8;--accent:#f0a068;--muted:#aab4c0;--card:#1d2c3b;--geel:#3a3523;--ok:#7fd49b;--let:#f0b86a}}
+  :root[data-theme="dark"]{--bg:#14202c;--ink:#eef1f4;--navy:#9cc3e8;--accent:#f0a068;--muted:#aab4c0;--card:#1d2c3b;--geel:#3a3523;--ok:#7fd49b;--let:#f0b86a}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}
+  main{max-width:680px;margin:0 auto;padding:24px 16px 48px}
+  h1{font-family:Georgia,serif;color:var(--navy);font-size:30px;line-height:1.2;margin:8px 0 12px}
+  h2{font-family:Georgia,serif;color:var(--navy);font-size:21px;margin:28px 0 8px}
+  p,li{font-size:16px}
+  .lead{font-size:18px}
+  .box{background:var(--card);border-radius:12px;padding:16px 18px;margin:16px 0}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:600;margin:6px 6px 6px 0}
+  .btn.alt{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+  ul{padding-left:20px}
+  .ai{font-size:14px;color:var(--muted)}
+  footer{margin-top:36px;font-size:14px;color:var(--muted);border-top:1px solid var(--muted);padding-top:12px}
+  a{color:var(--navy)}
+  label{display:block;font-weight:600;margin:10px 0 4px}
+  input[type=number]{width:100%;box-sizing:border-box;font-size:20px;padding:10px 12px;border-radius:8px;border:1px solid var(--muted);background:var(--geel);color:var(--ink)}
+  .uitkomst{margin-top:14px;padding:14px;border-radius:10px;background:var(--bg)}
+  .getal{font-family:Georgia,serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1.2}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{padding:6px 4px;border-bottom:1px solid rgba(86,98,114,.3);text-align:left;vertical-align:top}
+  td.r,th.r{text-align:right;white-space:nowrap}
+  .st{font-size:12px;font-weight:700;letter-spacing:.03em;padding:2px 6px;border-radius:6px;border:1px solid currentColor;white-space:nowrap}
+  .vast{color:var(--ok)} .nog{color:var(--let)}
+  .let{color:var(--let);font-weight:600}
+  .tabwrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<main>
+  <p class="ai">Klaarwerk Studio · huurregels 2027</p>
+  <h1>Huurgrenzen 2027: sociale huur, middenhuur of vrije sector?</h1>
+  <p class="lead">Vul het aantal punten van uw woning in. U ziet in welk segment de woning per 1 januari 2027 valt en welke bovengrens daar hoort.</p>
+
+  <div class="box" id="rekenaar">
+    <label for="punten">Aantal punten van de woning (woningwaarderingsstelsel)</label>
+    <input id="punten" type="number" inputmode="numeric" min="0" max="500" step="1" placeholder="bijvoorbeeld 150">
+    <label for="huur">Huidige kale huur per maand in euro (mag leeg blijven)</label>
+    <input id="huur" type="number" inputmode="decimal" min="0" step="1" placeholder="bijvoorbeeld 1100">
+    <div class="uitkomst" id="uit" aria-live="polite">
+      <div class="getal" id="seg">Vul uw punten in</div>
+      <div id="tekst" class="ai">De uitkomst verschijnt hier.</div>
+    </div>
+    <p class="ai">De berekening gebeurt in uw eigen browser. Er wordt niets verstuurd of bewaard.</p>
+  </div>
+
+  <h2>De grenzen per 1 januari 2027</h2>
+  <div class="tabwrap">
+  <table aria-label="Huurgrenzen 2026 en 2027">
+    <tr><th>Segment</th><th class="r">2026</th><th class="r">2027</th></tr>
+    <tr><td>Sociale huur, tot en met 143 punten<br><span class="st vast">VASTGESTELD</span></td><td class="r">€ 932,93</td><td class="r">€ 959,71</td></tr>
+    <tr><td>Middenhuur, 144 tot en met 186 punten<br><span class="st vast">VASTGESTELD</span></td><td class="r">€ 1.228,07</td><td class="r">€ 1.263,32</td></tr>
+    <tr><td>Vrije sector, vanaf 187 punten<br><span class="st vast">VASTGESTELD</span></td><td colspan="2">geen maximale huur uit het stelsel</td></tr>
+  </table>
+  </div>
+  <p>De grenzen gaan per 1 januari 2027 met 2,87% omhoog (in 2026 was dat 3,65%). Het bedrag is de bovengrens van het segment, niet de maximale huur van uw woning: die hangt af van de punten.</p>
+
+  <h2>Maximale huurverhoging 2027: nog niet aangekondigd</h2>
+  <p class="let">Stand 25 november 2026: de percentages voor de huurverhoging in 2027 zijn nog niet officieel bekend.</p>
+  <p>Dat het nog niet bekend is, betekent dat elk getal dat u nu elders leest een schatting is. Wij noemen er geen. Ter vergelijking, wat de overheid voor 2026 aankondigde (15 december 2025): sociale huur maximaal 4,1%, middenhuur 6,1% en vrije sector 4,4%. Dat zijn geen cijfers voor 2027.</p>
+  <p>Zodra de percentages voor 2027 officieel zijn, passen we deze pagina aan met de bron en de datum.</p>
+
+  <h2>Wat verandert er nog meer per 1 januari 2027?</h2>
+  <div class="tabwrap">
+  <table aria-label="Status van de regels">
+    <tr><th>Onderwerp</th><th>Status</th></tr>
+    <tr><td>Het puntenstelsel verandert (onder meer WOZ-opslag, rijksmonumenten, buitenruimte, douche en bad), Staatsblad 2026, 267</td><td><span class="st vast">VASTGESTELD</span></td></tr>
+    <tr><td>Wet toekomstbestendige Huurcommissie</td><td><span class="st vast">VASTGESTELD</span></td></tr>
+    <tr><td>Huurverhoging sociale huur: maximaal 4,1%, geldt tot 1 juli 2027</td><td><span class="st vast">VASTGESTELD</span></td></tr>
+    <tr><td>Huurverhoging 2027 in alle segmenten</td><td><span class="st nog">NOG NIET BEKEND</span></td></tr>
+  </table>
+  </div>
+
+  <h2>Wilt u de rest weten?</h2>
+  <div class="box">
+    <strong>Gratis A4: de twee grenzen en wat vaststaat, op één pagina.</strong><br>
+    <a class="btn" href="https://payhip.com/b/qpGt1">Gratis A4 downloaden</a>
+    <p>Wilt u het puntenstelsel stap voor stap, met het rekenvoorbeeld van de Huurcommissie voor de WOZ-opslag en elke regel met bron? Dat staat in de gids <em>Huurregels 2027 voor kleine verhuurders</em> (€ 9, gratis updates bij wetswijziging tot 31 december 2027).</p>
+    <a class="btn alt" href="https://payhip.com/b/ScEpP">Bekijk de gids</a>
+  </div>
+
+  <h2>Wat deze pagina niet doet</h2>
+  <ul>
+    <li>Het telt de punten van uw woning niet voor u. Dat doet de Huurcommissie met de huurprijscheck, of u telt zelf met het woningwaarderingsstelsel.</li>
+    <li>Een huur onder de bovengrens van uw segment is niet automatisch toegestaan: de maximale huur bij uw puntenaantal kan lager zijn.</li>
+    <li>Het is geen juridisch advies. Voor een bindende uitspraak: de Huurcommissie, uw gemeente of een jurist.</li>
+  </ul>
+
+  <p class="ai">Bronnen: Volkshuisvesting Nederland, <a href="https://www.volkshuisvestingnederland.nl/documenten/2026/10/07/de-maximale-huurprijsgrenzen-zelfstandige-woningen-per-1-januari-2027">de maximale huurprijsgrenzen zelfstandige woningen per 1 januari 2027</a>; Huurcommissie (nieuwsbericht 29 oktober 2026); Staatsblad 2026, 267; Rijksoverheid, <a href="https://www.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening/nieuws/2025/12/15/maximale-huurverhoging-2026-in-sociale-sector-41-middenhuur-61-en-vrije-sector-44">maximale huurverhoging 2026</a> (15 december 2025). Stand van de gegevens: 25 november 2026.</p>
+  <p class="ai">Deze pagina en de rekenhulp zijn gemaakt met hulp van AI (Claude). De grenzen en de indeling zijn bij de bronnen nagekeken en de rekenhulp is met testgevallen gecontroleerd.</p>
+  <footer>Klaarwerk Studio · <a href="https://payhip.com/KlaarwerkStudio">payhip.com/KlaarwerkStudio</a></footer>
+</main>
+<script>
+(function(){
+  var S=959.71, M=1263.32;
+  function fmt(x){return x.toLocaleString('nl-NL',{style:'currency',currency:'EUR'});}
+  function bepaal(p,h){
+    if(!(p>=0)||p!==Math.floor(p)) return null;
+    var seg, grens, t;
+    if(p<=143){seg='Sociale huur';grens=S;t='Tot en met 143 punten: sociale huur. De bovengrens van dit segment is '+fmt(S)+' per maand.';}
+    else if(p<=186){seg='Middenhuur';grens=M;t='144 tot en met 186 punten: gereguleerde middenhuur. De bovengrens van dit segment is '+fmt(M)+' per maand.';}
+    else{seg='Vrije sector';grens=null;t='Vanaf 187 punten is de huur vrij: het stelsel geeft hier geen maximale huur.';}
+    var extra='';
+    if(grens!==null && h>0){
+      extra=h>grens?'Uw huur van '+fmt(h)+' ligt boven de bovengrens van dit segment. Laat de puntentelling controleren.':'Uw huur van '+fmt(h)+' ligt op of onder de bovengrens van dit segment. De maximale huur bij uw punten kan lager zijn dan de bovengrens.';
+    }
+    return {seg:seg,tekst:t,extra:extra};
+  }
+  if(typeof module!=='undefined'){module.exports=bepaal;return;}
+  function toon(){
+    var p=document.getElementById('punten').value, h=parseFloat(document.getElementById('huur').value);
+    var seg=document.getElementById('seg'), tk=document.getElementById('tekst');
+    if(p===''){seg.textContent='Vul uw punten in';tk.textContent='De uitkomst verschijnt hier.';return;}
+    var r=bepaal(Number(p),h);
+    if(!r){seg.textContent='Vul een heel getal in';tk.textContent='Het aantal punten is een heel getal, bijvoorbeeld 150.';return;}
+    seg.textContent=r.seg;tk.textContent=r.tekst+(r.extra?' '+r.extra:'');
+  }
+  document.getElementById('punten').addEventListener('input',toon);
+  document.getElementById('huur').addEventListener('input',toon);
+})();
+</script>
+</body>
+</html>

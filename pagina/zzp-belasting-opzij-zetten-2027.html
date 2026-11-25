@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoeveel belasting opzij zetten als zzp'er in 2027? Reken het direct uit</title>
+<meta name="description" content="Zzp belasting berekenen voor 2027: vul je verwachte winst in en zie hoeveel je per maand opzij zet voor inkomstenbelasting en Zvw. Met de cijfers van het Belastingplan 2027 en bronnen.">
+<style>
+  :root{--bg:#F4EFE6;--ink:#1E2326;--teal:#1F4E5A;--terra:#E07A5F;--muted:#5A6064;--card:#ffffff;--geel:#FFF2CC}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1b2124;--ink:#eef1f2;--teal:#8fc3cc;--terra:#e8957f;--muted:#aab3b8;--card:#242c30;--geel:#3a3523}}
+  :root[data-theme="dark"]{--bg:#1b2124;--ink:#eef1f2;--teal:#8fc3cc;--terra:#e8957f;--muted:#aab3b8;--card:#242c30;--geel:#3a3523}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}
+  main{max-width:680px;margin:0 auto;padding:24px 16px 48px}
+  h1{font-family:Georgia,serif;color:var(--teal);font-size:30px;line-height:1.2;margin:8px 0 12px}
+  h2{font-family:Georgia,serif;color:var(--teal);font-size:21px;margin:28px 0 8px}
+  p,li{font-size:16px}
+  .lead{font-size:18px}
+  .box{background:var(--card);border-radius:12px;padding:16px 18px;margin:16px 0}
+  .btn{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:600;margin:6px 6px 6px 0}
+  .btn.alt{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+  ul{padding-left:20px}
+  .ai{font-size:14px;color:var(--muted)}
+  footer{margin-top:36px;font-size:14px;color:var(--muted);border-top:1px solid var(--muted);padding-top:12px}
+  a{color:var(--teal)}
+  label{display:block;font-weight:600;margin:10px 0 4px}
+  input[type=number]{width:100%;box-sizing:border-box;font-size:20px;padding:10px 12px;border-radius:8px;border:1px solid var(--muted);background:var(--geel);color:var(--ink)}
+  .keus{display:flex;gap:16px;margin:4px 0}
+  .uitkomst{text-align:center;margin-top:14px;padding:14px;border-radius:10px;background:var(--bg)}
+  .getal{font-family:Georgia,serif;font-size:46px;font-weight:700;color:var(--teal);line-height:1.1}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  td{padding:4px 0;border-bottom:1px solid rgba(90,96,100,.25)}
+  td:last-child{text-align:right;white-space:nowrap}
+</style>
+</head>
+<body>
+<main>
+  <p class="ai">Klaarwerk Studio · zzp-belasting 2027</p>
+  <h1>Hoeveel belasting moet je als zzp'er opzij zetten in 2027?</h1>
+  <p class="lead">Vul je verwachte winst in. Je ziet direct hoeveel je per maand opzij zet voor inkomstenbelasting en de Zvw-bijdrage, met de cijfers van het Belastingplan 2027.</p>
+
+  <div class="box" id="rekenaar">
+    <label for="winst">Verwachte winst in 2027 (omzet min kosten, zonder btw)</label>
+    <input id="winst" type="number" inputmode="numeric" min="0" step="1000" value="54000">
+    <label>Haal je het urencriterium (minstens 1.225 uur per jaar aan je bedrijf)?</label>
+    <div class="keus">
+      <label style="font-weight:400;margin:0"><input type="radio" name="uc" value="1" checked> ja</label>
+      <label style="font-weight:400;margin:0"><input type="radio" name="uc" value="0"> nee</label>
+    </div>
+    <div class="uitkomst">
+      <div>Zet elke maand opzij</div>
+      <div class="getal" id="maand">€ 932</div>
+      <div class="ai">voor inkomstenbelasting en Zvw samen</div>
+    </div>
+    <table aria-label="Berekening per jaar">
+      <tr><td>Ondernemersaftrek (zelfstandigenaftrek)</td><td id="r-oa"></td></tr>
+      <tr><td>MKB-winstvrijstelling (12,7%)</td><td id="r-mkb"></td></tr>
+      <tr><td>Belastbaar inkomen</td><td id="r-b"></td></tr>
+      <tr><td>Inkomstenbelasting na heffingskortingen</td><td id="r-ib"></td></tr>
+      <tr><td>Zvw-bijdrage (5,02%)</td><td id="r-zvw"></td></tr>
+      <tr><td><strong>Samen per jaar</strong></td><td id="r-tot"></td></tr>
+    </table>
+    <p class="ai">De berekening gebeurt in je eigen browser. Er wordt niets verstuurd of bewaard.</p>
+  </div>
+
+  <h2>Liever in Excel of Google Sheets?</h2>
+  <div class="box">
+    <strong>Dezelfde snelcheck als download, gratis.</strong><br>
+    <a class="btn" href="https://payhip.com/b/U12Im">Gratis snelcheck 2027</a>
+    <p class="ai">Freelancer in the Netherlands? <a href="https://payhip.com/b/xQs1n">Free tax check 2027 in English</a>.</p>
+  </div>
+
+  <h2>Hoe het werkt</h2>
+  <ul>
+    <li>Haal je het urencriterium, dan gaat er eerst <strong>€ 900 zelfstandigenaftrek</strong> af.</li>
+    <li>Over wat overblijft gaat de <strong>MKB-winstvrijstelling van 12,7%</strong> eraf.</li>
+    <li>Over de rest betaal je inkomstenbelasting in drie schijven: <strong>35,84%</strong> tot € 39.247, <strong>38,02%</strong> tot € 78.426 en <strong>49,50%</strong> daarboven.</li>
+    <li>Daar gaan de <strong>algemene heffingskorting</strong> (tot € 3.154) en de <strong>arbeidskorting</strong> (tot € 5.813) weer af.</li>
+    <li>Daarbij komt de <strong>Zvw-bijdrage van 5,02%</strong> over je inkomen tot € 82.547. Die komt als aparte aanslag, vaak pas een jaar later.</li>
+  </ul>
+
+  <h2>Wat deze rekenaar niet doet</h2>
+  <ul>
+    <li>Geen partner, toeslagen, box 3, hypotheek of ander inkomen; geen startersaftrek; jonger dan de AOW-leeftijd.</li>
+    <li>Geen btw: die is niet van jou en draag je apart af.</li>
+    <li>Geen belastingadvies. Het is een planningshulp; twijfel je, vraag een boekhouder.</li>
+  </ul>
+
+  <h2>Stand van de cijfers</h2>
+  <p>Stand 15 november 2026: het Belastingplan 2027 zoals de Tweede Kamer het op 12 november aannam. De Eerste Kamer moet nog stemmen. Verandert er iets, dan passen we deze pagina en de downloads aan.</p>
+  <p class="ai">Bronnen: <a href="https://berthub.eu/tkconv/document.html?nummer=2026D56417">amendement nr. 42 (Kamerstuk 37 022)</a>, <a href="https://berthub.eu/tkconv/document.html?nummer=2026D57504">amendement nr. 80</a>, <a href="https://www.taxlive.nl/nl/documenten/vn-vandaag/tweede-kamer-toch-akkoord-met-pakket-belastingplan-2027-en-novelle-box-3/">Taxlive over de stemming van 12 november</a>, Fiscale sleuteltabel 2027 (rijksfinancien.nl). De Zvw-bijdrage is een raming uit de begroting van VWS; de grenzen van de arbeidskorting zijn afgeleid van 2026.</p>
+
+  <h2>Meer weten dan alleen het maandbedrag?</h2>
+  <p>De volledige rekenhulp "Wat houd ik over in 2027?" rekent ook je btw per kwartaal, wat je per maand overhoudt, het uurtarief dat je nodig hebt, met twee grafieken en de hele berekening in zes stappen. Hij verschijnt in de <a href="https://payhip.com/KlaarwerkStudio">winkel</a> zodra de Eerste Kamer heeft gestemd.</p>
+
+  <p class="ai">Deze pagina en de rekenaar zijn gemaakt met hulp van AI. De formules zijn nagerekend met testgevallen.</p>
+  <footer>Klaarwerk Studio · <a href="https://payhip.com/KlaarwerkStudio">payhip.com/KlaarwerkStudio</a></footer>
+</main>
+<script>
+(function(){
+  var P={g1:39247,g2:78426,t1:0.3584,t2:0.3802,t3:0.495,aft:0.3816,ahk:3154,ahkS:30910,ahkP:0.06638,
+    i1:12114,k1:1066,i2:26168,k2:5424,i3:47834,km:5813,akS:47834,akP:0.0651,za:900,mkb:0.127,zp:0.0502,zm:82547};
+  function reken(w,uc){
+    w=Math.max(0,w||0);
+    var oa=uc?Math.min(w,P.za):0, mkb=Math.max(0,(w-oa)*P.mkb), b=Math.max(0,w-oa-mkb);
+    var ib=Math.min(b,P.g1)*P.t1+Math.max(0,Math.min(b,P.g2)-P.g1)*P.t2+Math.max(0,b-P.g2)*P.t3;
+    ib+=Math.min(oa+mkb,Math.max(0,b-P.g2))*(P.t3-P.aft);
+    var ahk=Math.max(0,P.ahk-Math.max(0,b-P.ahkS)*P.ahkP), ak;
+    if(b<=P.i1) ak=b/P.i1*P.k1; else if(b<=P.i2) ak=P.k1+(b-P.i1)/(P.i2-P.i1)*(P.k2-P.k1);
+    else if(b<=P.i3) ak=P.k2+(b-P.i2)/(P.i3-P.i2)*(P.km-P.k2); else ak=P.km;
+    ak=Math.max(0,ak-Math.max(0,b-P.akS)*P.akP);
+    var ibn=Math.max(0,ib-ahk-ak), zvw=Math.min(b,P.zm)*P.zp;
+    return {oa:oa,mkb:mkb,b:b,ib:ibn,zvw:zvw,tot:ibn+zvw,maand:(ibn+zvw)/12};
+  }
+  if(typeof module!=='undefined'){module.exports=reken;return;}
+  var f=new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+  function toon(){
+    var w=parseFloat(document.getElementById('winst').value);
+    var uc=document.querySelector('input[name=uc]:checked').value==='1';
+    var r=reken(w,uc);
+    document.getElementById('maand').textContent=f.format(r.maand);
+    [['r-oa','oa'],['r-mkb','mkb'],['r-b','b'],['r-ib','ib'],['r-zvw','zvw'],['r-tot','tot']].forEach(function(x){document.getElementById(x[0]).textContent=f.format(r[x[1]]);});
+  }
+  document.getElementById('winst').addEventListener('input',toon);
+  Array.prototype.forEach.call(document.querySelectorAll('input[name=uc]'),function(e){e.addEventListener('change',toon);});
+  toon();
+})();
+</script>
+</body>
+</html>
