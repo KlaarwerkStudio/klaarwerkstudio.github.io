@@ -1,0 +1,12 @@
+:root{--teal:#0F3D3E;--sand:#F6F1E7;--amber:#E3A72F;--ink:#1C2428;--mist:#E9F1EE}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:18px}
+header{background:var(--teal);color:#fff;padding:18px 20px}header a{color:#fff;text-decoration:none;font-weight:600;letter-spacing:.04em}
+main{max-width:760px;margin:0 auto;padding:28px 20px 60px}
+h1,h2{font-family:Fraunces,Georgia,serif;color:var(--teal);line-height:1.15}h1{font-size:2.1rem;margin:.2em 0 .5em}h2{font-size:1.5rem;margin:1.8em 0 .5em}
+.cta{display:inline-block;background:var(--amber);color:var(--ink);font-weight:600;padding:14px 26px;border-radius:40px;text-decoration:none;margin:.4em 0}
+.box{background:var(--sand);border-left:5px solid var(--amber);padding:16px 20px;border-radius:6px;margin:1.2em 0}
+.voorbeeld{background:var(--mist);padding:18px 22px;border-radius:8px;font-size:16.5px;white-space:pre-wrap}
+ol li,ul li{margin:.35em 0}small,.klein{font-size:15px;color:#4a5558}
+.kaart{display:block;background:var(--sand);padding:16px 20px;border-radius:8px;margin:12px 0;text-decoration:none;color:var(--ink)}.kaart strong{color:var(--teal);font-size:1.1rem}
+footer{background:var(--sand);padding:22px 20px;text-align:center;font-size:15px;color:#4a5558}
+a{color:var(--teal)}
